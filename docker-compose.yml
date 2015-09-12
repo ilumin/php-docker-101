@@ -13,8 +13,8 @@ php:
     - ./config/php/php-fpm.conf:/etc/php5/fpm/php-fpm.conf
     - ./src:/var/www
   links:
-    - db-mysql
-db-mysql:
+    - db
+db:
   image: sameersbn/mysql
   volumes:
     - /var/lib/mysql
