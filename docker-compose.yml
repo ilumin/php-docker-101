@@ -12,3 +12,13 @@ php:
   volumes:
     - ./config/php/php-fpm.conf:/etc/php5/fpm/php-fpm.conf
     - ./src:/var/www
+  links:
+    - db-mysql
+db-mysql:
+  image: sameersbn/mysql
+  volumes:
+    - /var/lib/mysql
+  environment:
+    - DB_NAME=demo
+    - DB_USER=root
+    - DB_PASS=1234
