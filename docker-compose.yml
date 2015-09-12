@@ -10,5 +10,5 @@ server-web:
 php:
   image: nmcteam/php56
   volumes:
-    - ./src/php-fpm.conf:/etc/php5/fpm/php-fpm.conf
+    - ./config/php/php-fpm.conf:/etc/php5/fpm/php-fpm.conf
     - ./src:/var/www
