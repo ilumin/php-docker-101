@@ -1,0 +1,8 @@
+server-web:
+  image: tutorial/nginx
+  ports: 
+    - "80:80"
+  volumes:
+    - ./src:/var/www
+    - ./config/nginx/vhost.conf:/etc/nginx/sites-enabled/vhost.conf
+
